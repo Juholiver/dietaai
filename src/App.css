@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #292a30 0%, #41275b 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 10px;
+
+}
+  .container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+  }
+  .title{
+    font-size: 2rem;
+    font-weight: 600;
+    color: linear-gradient(135deg, #292a30 0%, #41275b 100%);
+  }
+  .subtitle{
+    font-size: 1.25rem;
+    font-weight: 600;
+     color: linear-gradient(135deg, #292a30 0%, #41275b 100%);
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+
+  .Sexo {
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    
+     color: #f7f7f7;
+  }
+  
+  .Sexo:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .Container-Sexo {
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+  }
+  
+  .btn-masculino {
+    background: linear-gradient(to right, #2563eb, #9333ea);
+  }
+  
+  .btn-feminino {
+    background: linear-gradient(to right, #db2777, #9333ea);
+  }
+  .Container-Objetivo {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #f8f9fa;
+  }
+  
+  
+  .btn-objetivo-selected {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+  }
+  
+  .btn-objetivo-perder {
+    background: linear-gradient(to right, #dc2626, #9333ea);
+  }
+  
+  .btn-objetivo-manter {
+    background: linear-gradient(to right, #16a34a, #9333ea);
+  }
+  
+  .btn-Hipertrofia {
+    background: linear-gradient(to right, #2563eb, #9333ea);
+  }
+
+.result-container{
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.result-title {
+    margin-bottom: 30px;
+}
+.result-content {
+    background-color: #2d3748;
+    color: #e2e8f7;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+.error-message{
+    background-color: rgb(247, 212, 212);
+    color: #c53030;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.analyze-button{
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: rgb(3, 1, 1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    background: linear-gradient(to right, #16a34a, #9333ea);
+}
