@@ -41,20 +41,18 @@ function App() {
         <h3 className='subtitle'>A sua dieta personalizada</h3>
       </div>
       <div className='input-group'>
-        <label htmlFor='age'>Idade:</label>
-        <input type='number' id='age' name='age' value={age} onChange={(e) => setAge(e.target.value)} />
+        <label className="Age" htmlFor='age'>Idade:</label>
+        <input className="Age-Input" type='number' id='age' name='age' value={age} onChange={(e) => setAge(e.target.value)} />
 
-        <label htmlFor='weight'>Peso:</label>
-        <input type='number' id='weight' name='weight' value={weight} onChange={(e) => setWeight(e.target.value)} />
+        <label className="Weight" htmlFor='weight'>Peso:</label>
+        <input className="Weight-Input" type='number' id='weight' name='weight' value={weight} onChange={(e) => setWeight(e.target.value)} />
 
-        <label htmlFor='height'>Altura:</label>
-        <input type='number' id='height' name='height' value={height} onChange={(e) => setHeight(e.target.value)} />
+        <label className="Height" htmlFor='height'>Altura:</label>
+        <input className="Height-Input" type='number' id='height' name='height' value={height} onChange={(e) => setHeight(e.target.value)} />
       </div>
 
   <div>
-    <label className="Sexo">
-      Sexo
-    </label>
+    
     <div className="Container-Sexo">
       <button 
         onClick={() => setSexo('masculino')}

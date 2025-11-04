@@ -3,15 +3,60 @@ const geminiClient = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY)
 
 export async function analyzeCode(age, weight, height, sexo, objetivo) {
 
-    const prompt = `Crie uma dieta completa para uma pessoa do sexo ${sexo} com peso atual: ${weight}kg, altura: ${height}, idade: ${age} anos e com foco e objetivo em ${objetivo}, e ignore qualquer outro parametro que não seja os passados, forneça sugestões de alimentos de forma didática e clara:
-    - Forneça uma lista de alimentos recomendados para cada dia da semana.
-    - Nesse formato : 
-    - Cafe da Manha:
-    - Lanche da Manha:
-    - Almoço :
-    - Lanche da Tarde:
-    - Jantar:
-    - Ceia:
+    const prompt = `Crie um plano alimentar completo e personalizado para uma pessoa com as seguintes informações:
+
+Sexo: ${sexo}
+
+Peso atual: ${weight} kg
+
+Altura: ${height}
+
+Idade: ${age} anos
+
+Objetivo: ${objetivo}
+
+💡 Instruções:
+
+Considere apenas os parâmetros acima (ignore qualquer outro dado não listado).
+
+O plano deve ser nutritivo, equilibrado e voltado ao objetivo informado (ex: perda de peso, ganho de massa, manutenção, etc.).
+
+Apresente sugestões de alimentos de forma didática, prática e fácil de seguir.
+
+Utilize uma linguagem amigável, como se estivesse explicando para um usuário de aplicativo.
+
+Estruture a dieta por dia da semana, indicando as refeições em tópicos.
+
+🍽 Formato de saída desejado
+
+🗓 Segunda-feira:
+
+Café da Manhã:
+
+(Sugestões de alimentos e quantidades aproximadas)
+
+Lanche da Manhã:
+
+(...)
+
+Almoço:
+
+(...)
+
+Lanche da Tarde:
+
+(...)
+
+Jantar:
+
+(...)
+
+Ceia:
+
+(...)
+
+🗓 Terça-feira:
+(repita o mesmo formato até domingo)
     `
 
     try {

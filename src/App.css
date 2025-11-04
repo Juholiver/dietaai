@@ -1,153 +1,317 @@
+/* ===============================
+   RESET E BASE GERAL
+=============================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, #292a30 0%, #41275b 100%);
-    min-height: 100vh;
-    padding: 20px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(-55deg, #1f1f25 0%, #3b1f57 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-size: 400% 400%;
+  animation: moveGradient 10s ease infinite;
 }
+
+/* ===============================
+   MAIN CONTAINER
+=============================== */
 main {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: rgba(255,255,255,0.95);
-    padding: 30px;
-    border-radius: 10px;
+  width: 100dvh;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  transition: all 0.4s ease;
+  margin: 40px auto;
+}
+
+/* ===============================
+   TITULOS
+=============================== */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #d1d5db;
+}
+
+/* ===============================
+   CONTAINERS E INPUTS
+=============================== */
+.container {
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  padding: 25px;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1),
+              0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+.Age {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.65rem;
+  color: #d1d5db;
+}
+.Age-Input {
+  border: none;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: black;
 
 }
-  .container{
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    
-  }
-  .title{
-    font-size: 2rem;
-    font-weight: 600;
-    color: linear-gradient(135deg, #292a30 0%, #41275b 100%);
-  }
-  .subtitle{
-    font-size: 1.25rem;
-    font-weight: 600;
-     color: linear-gradient(135deg, #292a30 0%, #41275b 100%);
-  }
-
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-
-  .Sexo {
-    padding: 0.75rem 1rem;
-    border-radius: 0.75rem;
-    font-weight: 600;
-    transition: all 0.3s;
-    
-     color: #f7f7f7;
-  }
-  
-  .Sexo:hover {
-    background-color: #e5e7eb;
-  }
-  
-  .Container-Sexo {
-    padding: 0.75rem 1rem;
-    border-radius: 0.75rem;
-    font-weight: 600;
-    transition: all 0.3s;
-    color: white;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
-  }
-  
-  .btn-masculino {
-    background: linear-gradient(to right, #2563eb, #9333ea);
-  }
-  
-  .btn-feminino {
-    background: linear-gradient(to right, #db2777, #9333ea);
-  }
-  .Container-Objetivo {
-    padding: 1rem;
-    border-radius: 0.75rem;
-    font-weight: 600;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: #f8f9fa;
-  }
-  
-  
-  .btn-objetivo-selected {
-    padding: 1rem;
-    border-radius: 0.75rem;
-    font-weight: 600;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: white;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
-  }
-  
-  .btn-objetivo-perder {
-    background: linear-gradient(to right, #dc2626, #9333ea);
-  }
-  
-  .btn-objetivo-manter {
-    background: linear-gradient(to right, #16a34a, #9333ea);
-  }
-  
-  .btn-Hipertrofia {
-    background: linear-gradient(to right, #2563eb, #9333ea);
-  }
-
-.result-container{
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
+.Weight {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.65rem;
+  color: #d1d5db;
 }
+.Weight-Input {
+  border: none;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: black;
+
+}
+.Height {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.65rem;
+  color: #d1d5db;
+}
+.Height-Input {
+  border: none;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: black;
+
+}
+
+
+
+/* ===============================
+   BOTÕES DE SEXO
+=============================== */
+.Sexo {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f7f7f7;
+  text-align: center;
+  cursor: pointer;
+}
+
+.Sexo:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.03);
+}
+
+.Container-Sexo {
+  display: flex;
+  padding: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 30px;
+  gap: 1.2rem;
+}
+
+.btn-masculino {
+  background: linear-gradient(to right, #2563eb, #9333ea);
+}
+
+.btn-feminino {
+  background: linear-gradient(to right, #db2777, #9333ea);
+}
+
+/* ===============================
+   BOTÕES DE OBJETIVO
+=============================== */
+.Container-Objetivo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  
+}
+
+.btn-objetivo-selected {
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.btn-objetivo-perder {
+  background: linear-gradient(to right, #dc2626, #9333ea);
+}
+
+.btn-objetivo-manter {
+  background: linear-gradient(to right, #16a34a, #9333ea);
+}
+
+.btn-Hipertrofia {
+  background: linear-gradient(to right, #2563eb, #9333ea);
+}
+
+/* ===============================
+   RESULTADOS
+=============================== */
+.result-container {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 2.5rem;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
 .result-title {
-    margin-bottom: 30px;
-}
-.result-content {
-    background-color: #2d3748;
-    color: #e2e8f7;
-    padding: 20px;
-    border-radius: 10px;
-    line-height: 1.6;
-    white-space: pre-line;
-}
-.error-message{
-    background-color: rgb(247, 212, 212);
-    color: #c53030;
-    padding: 15px;
-    margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(90deg, #4f46e5, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.analyze-button{
-    padding: 1rem;
-    border-radius: 0.75rem;
-    font-weight: 600;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: rgb(3, 1, 1);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
-    background: linear-gradient(to right, #16a34a, #9333ea);
+.result-content {
+  background-color: #1f2937;
+  color: #e2e8f0;
+  padding: 20px;
+  border-radius: 0.75rem;
+  line-height: 1.6;
+  white-space: pre-line;
+  font-size: 1rem;
 }
+
+/* ===============================
+   MENSAGEM DE ERRO
+=============================== */
+.error-message {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border-left: 4px solid #ef4444;
+  padding: 15px;
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   BOTÃO FINAL
+=============================== */
+.analyze-button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.85rem;
+  font-weight: 600;
+  border: none;
+  background: linear-gradient(to right, #22c55e, #9333ea);
+  color: white;
+  box-shadow: 0 8px 20px rgba(147, 51, 234, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.analyze-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(147, 51, 234, 0.6);
+}
+
+@keyframes moveGradient {
+  0% {
+    /* Posição inicial: 0% horizontal, 50% vertical */
+    background-position: 0% 50%;
+  }
+  50% {
+    /* Posição intermediária: 100% horizontal, 50% vertical */
+    background-position: 100% 50%;
+  }
+  100% {
+    /* Volta para a posição inicial, completando o loop */
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+    padding: 30px;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  main {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+  }
+}
+
